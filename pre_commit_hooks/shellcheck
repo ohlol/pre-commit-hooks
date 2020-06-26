@@ -10,4 +10,6 @@ if [ "${DEBUG}" != unset ]; then
   set -x
 fi
 
-shellcheck "$@"
+readonly cmd="shellcheck $*"
+echo "[RUN] ${cmd}"
+${cmd}
